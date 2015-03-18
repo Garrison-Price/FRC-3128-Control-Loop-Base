@@ -1,12 +1,14 @@
 package org.usfirst.frc.team3128.robot.control;
 
 import org.usfirst.frc.team3128.robot.Global;
+import org.usfirst.frc.team3128.robot.actuation.Actuator;
 import org.usfirst.frc.team3128.robot.logging.Log;
 
 public abstract class Controller implements Runnable {
 	private int frequency; //Hertz
 	private boolean loggingEnabled;
-	private Log log;
+	protected Log log;
+	protected Actuator actuator;
 	private boolean running;
 	private boolean firstStart;
 	

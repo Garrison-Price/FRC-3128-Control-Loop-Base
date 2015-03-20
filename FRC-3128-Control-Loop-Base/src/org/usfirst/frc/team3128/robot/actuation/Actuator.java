@@ -5,30 +5,32 @@ import org.usfirst.frc.team3128.robot.logging.Log;
 public abstract class Actuator {
 	private boolean loggingEnabled;
 	protected Log log;
-	private double inputUpperBound;
-	private double inputLowerBound;
+	private double maxInput;
+	private double minInput;
 	
 	public abstract void set(double input);
 	
 	public boolean isLoggingEnabled() {
 		return loggingEnabled;
 	}
+	
 	public void setLoggingEnabled(boolean loggingEnabled) {
 		this.loggingEnabled = loggingEnabled;
 	}
 	
 	public double getInputUpperBound() {
-		return inputUpperBound;
+		return maxInput;
 	}
+	
 	public void setInputUpperBound(double inputUpperBound) {
-		this.inputUpperBound = inputUpperBound;
+		this.maxInput = inputUpperBound;
 	}
 
 	public double getInputLowerBound() {
-		return inputLowerBound;
+		return minInput;
 	}
 
 	public void setInputLowerBound(double inputLowerBound) {
-		this.inputLowerBound = inputLowerBound;
+		this.minInput = inputLowerBound;
 	}
 }

@@ -8,6 +8,11 @@ public abstract class Actuator {
 	private double maxInput;
 	private double minInput;
 	
+	public Actuator(double maxInput, double minInput) {
+		this.maxInput = maxInput;
+		this.minInput = minInput;
+	}
+	
 	public abstract void set(double input);
 	
 	public boolean isLoggingEnabled() {

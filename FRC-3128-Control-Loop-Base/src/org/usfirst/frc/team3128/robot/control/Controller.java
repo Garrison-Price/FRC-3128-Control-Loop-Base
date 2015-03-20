@@ -12,10 +12,11 @@ public abstract class Controller implements Runnable {
 	private boolean running;
 	private boolean firstStart;
 	
-	public Controller(int frequency, Log log, boolean loggingEnabled) {
+	public Controller(Actuator actuator, int frequency, Log log, boolean loggingEnabled) {
 		this.frequency = frequency;
 		this.log = log;
 		this.loggingEnabled = loggingEnabled;
+		this.actuator = actuator;
 		firstStart = true;
 	}
 	
